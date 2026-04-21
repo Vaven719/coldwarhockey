@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ice Hockey and the Cold War</title>
+  <link rel="stylesheet" href="styles.css" />
+  <style>
+    /* Timeline layout override for landing */
+    .timeline-entry {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: relative;
+    }
+    .tl-label {
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 9px;
+      color: var(--gold);
+      font-weight: bold;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+      white-space: nowrap;
+    }
+    .tl-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+      position: relative;
+      z-index: 2;
+    }
+    .tl-desc {
+      margin-top: 8px;
+      font-family: Georgia, serif;
+      font-size: 10px;
+      color: var(--muted);
+      text-align: center;
+      line-height: 1.4;
+      max-width: 80px;
+    }
+    .tl-desc a {
+      color: var(--text-dark);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    .tl-desc a:hover { color: var(--accent-red); }
+
+    .timeline-scroll {
+      overflow-x: auto;
+      padding-bottom: 8px;
+    }
+    .timeline-row {
+      display: flex;
+      align-items: flex-end;
+      position: relative;
+      min-width: 980px;
+      padding: 0 16px;
+      gap: 0;
+    }
+    .timeline-spine {
+      position: absolute;
+      left: 16px;
+      right: 16px;
+      top: calc(100% - 84px);
+      height: 0.5px;
+      background: var(--border);
+      z-index: 1;
+    }
+
+    .tl-entry {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-width: 60px;
+    }
+
+    .tl-top {
+      margin-bottom: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    /* Legend */
+    .tl-legend {
+      display: flex;
+      gap: 20px;
+      margin-bottom: 20px;
+    }
+    .tl-legend-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--muted);
+    }
+    .legend-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAVIGATION -->
+<nav>
+  <a href="index.html" class="nav-logo">Ice Hockey &amp; the Cold War</a>
+  <a href="index.html" class="active">Overview</a>
+  <a href="soviet-union.html">Soviet Union</a>
+  <a href="united-states.html">United States</a>
+  <a href="czechoslovakia.html">Czechoslovakia</a>
+  <a href="canada.html">Canada</a>
+  <a href="conclusion.html">Conclusion</a>
+  <a href="bibliography.html">Bibliography</a>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div class="hero-kicker">
+    <span>Cold War History</span>
+  </div>
+  <span class="hero-eyebrow">Overview</span>
+  <h1>Ice Hockey and the Cold War</h1>
+  <p class="hero-subtitle">Four nations. One game. A conflict fought not only in secret meetings and arms races, but on frozen rinks from Prague to Lake Placid.</p>
+  <div class="thesis-box">
+    <span class="thesis-label">Thesis</span>
+    While American popular culture focuses on the U.S./Soviet rivalry in Cold War ice hockey, international competitions during this period were equally defined by tensions within the blocs. Players and fans repeatedly acted in ways that defied their country's official stance in the Cold War: adversaries formed friendships and cheered for one another, and allied countries had incredibly tense matches.
+  </div>
+</header>
+
+<!-- BODY -->
+<main class="page-body">
+
+  <!-- CONTEXT -->
+  <section class="section">
+    <span class="section-label">Context</span>
+    <p>During the Cold War, sports competitions became increasingly politicized, because the nuclear age forced states — specifically the United States and the Soviet Union — to find non-military ways of asserting the superiority of their ideological systems. Ice hockey competitions became especially tense. Almost all Warsaw Pact and NATO countries, as well as all European neutrals, played in at least one Olympic hockey tournament.</p>
+    <p>The sport was especially significant for four key countries. For the US and the Soviet Union, the structure of their hockey programs and style of play directly reflected their ideological systems. For Czechoslovakia and Canada, hockey was an important part of their national identities. Because Czechoslovakia and Canada were significantly weaker than their respective superpower allies, hockey allowed them to express their independence and pursue their own goals.</p>
+  </section>
+
+  <!-- HISTORY -->
+  <section class="section">
+    <span class="section-label">History of International Ice Hockey</span>
+    <h2>Two Eras of Dominance</h2>
+    <p>The International Ice Hockey Federation (IIHF), which is the governing body of international ice hockey to this day, was founded in Paris in 1908 as the Ligue Internationale de Hockey sur Glace (LIHG). The IIHF recognizes the first World Championship as the 1920 Olympics in Belgium, and the first World Championship outside the Olympics as the 1930 tournament in Germany.</p>
+    <p>International ice hockey during the 20th century can be divided into two periods: Canadian and Soviet dominance. Between 1920–1952, Canada won gold in 6 out of 7 Olympic Games and 15 out of 18 World Championships. Between 1954–1988, the Soviet Union won gold in 7 out of 9 Olympics and 21 out of 34 World Championships — finishing every Olympic and World Championship with a medal.</p>
+
+    <!-- STAT CARDS -->
+    <div class="card-grid card-grid-3" style="margin-top:32px;">
+      <div class="stat-card">
+        <div class="stat-number">15</div>
+        <div class="stat-label">Canadian World Championship Golds, 1920–1952</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number">21</div>
+        <div class="stat-label">Soviet World Championship Golds, 1954–1988</div>
+      </div>
+      <div class="stat-card">
+        <div class="stat-number" style="color:var(--blue)">4</div>
+        <div class="stat-label">Nations at the center of Cold War hockey</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TIMELINE -->
+  <section class="section">
+    <span class="section-label">Timeline</span>
+    <h2>Key Events, 1908–1991</h2>
+
+    <div class="tl-legend">
+      <div class="tl-legend-item">
+        <div class="legend-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+        Cold War Event
+      </div>
+      <div class="tl-legend-item">
+        <div class="legend-dot" style="background:var(--blue);"></div>
+        Hockey Event
+      </div>
+      <div class="tl-legend-item">
+        <div class="legend-dot" style="background:var(--accent-red);"></div>
+        Linked Section
+      </div>
+    </div>
+
+    <div class="timeline-scroll">
+      <div class="timeline-row">
+        <div class="timeline-spine"></div>
+
+        <!-- Each event -->
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1908</div>
+            <div class="tl-dot" style="background:var(--blue);"></div>
+          </div>
+          <div class="tl-desc">IIHF founded</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1930</div>
+            <div class="tl-dot" style="background:var(--blue);"></div>
+          </div>
+          <div class="tl-desc">First World Championship outside Olympics</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1933</div>
+            <div class="tl-dot" style="background:var(--blue);"></div>
+          </div>
+          <div class="tl-desc">US first non-Canadian world champion</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1939–47</div>
+            <div class="tl-dot" style="background:#555;border:1px solid #777;"></div>
+          </div>
+          <div class="tl-desc">WWII — no Olympic or Championship play</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1945</div>
+            <div class="tl-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+          </div>
+          <div class="tl-desc">Soviets exposed to Canadian hockey in London</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1947</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="czechoslovakia.html">Czechoslovakia first non-North American world champion</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1953</div>
+            <div class="tl-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+          </div>
+          <div class="tl-desc">Khrushchev comes to power</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1954</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="soviet-union.html">Soviet team debuts at World Championships</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1956</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="soviet-union.html">First Soviet Olympic victory</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1960</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="united-states.html">First American Olympic victory — "Forgotten Miracle"</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1968</div>
+            <div class="tl-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+          </div>
+          <div class="tl-desc">Prague Spring &amp; Soviet invasion</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1969</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="czechoslovakia.html">World Championships &amp; Prague Hockey Riots</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1972</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="canada.html">Summit Series</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1976</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="canada.html">Super Series &amp; First Canada Cup</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1980</div>
+            <div class="tl-dot" style="background:var(--accent-red);"></div>
+          </div>
+          <div class="tl-desc"><a href="united-states.html">Miracle on Ice</a></div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1989</div>
+            <div class="tl-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+          </div>
+          <div class="tl-desc">Berlin Wall falls</div>
+        </div>
+
+        <div class="tl-entry">
+          <div class="tl-top">
+            <div class="tl-label">1991</div>
+            <div class="tl-dot" style="background:var(--bg-dark);border:1.5px solid #555;"></div>
+          </div>
+          <div class="tl-desc">Soviet Union dissolves</div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- NAV CARDS -->
+  <section class="section" style="border-bottom:none;padding-bottom:0;">
+    <span class="section-label">Explore the Project</span>
+    <div class="nav-cards">
+      <a href="soviet-union.html" class="nav-card nav-card-dark">
+        <span class="card-part">Part One</span>
+        <h3>East vs. West</h3>
+        <p>How the hockey programs of the United States and Soviet Union directly embodied the ideological systems that created them — and what happened when they finally met on the ice.</p>
+        <div class="card-links">
+          <a href="soviet-union.html" class="card-link">Soviet Union</a>
+          <a href="united-states.html" class="card-link">United States</a>
+        </div>
+      </a>
+      <a href="czechoslovakia.html" class="nav-card nav-card-red">
+        <span class="card-part">Part Two</span>
+        <h3>Within the Blocs</h3>
+        <p>How Czechoslovakia and Canada used hockey to defy their superpower allies, express national identity, and pursue their own diplomatic goals — often at great cost.</p>
+        <div class="card-links">
+          <a href="czechoslovakia.html" class="card-link">Czechoslovakia</a>
+          <a href="canada.html" class="card-link">Canada</a>
+        </div>
+      </a>
+    </div>
+  </section>
+
+</main>
+
+</body>
+</html>

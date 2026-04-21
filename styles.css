@@ -1,0 +1,569 @@
+@import url('https://fonts.googleapis.com/css2?family=Georgia:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --bg-dark: #111110;
+  --bg-page: #F7F3ED;
+  --accent-red: #C0392B;
+  --gold: #8B7355;
+  --blue: #3B6EC0;
+  --text-dark: #3a3028;
+  --card-bg: #EDE8DE;
+  --border: #D8D0C4;
+  --card-border: #D0C8BC;
+  --dark-card: #1a1a18;
+  --rule-dark: #2e2e2b;
+  --muted: #7a6e64;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  background: var(--bg-page);
+  color: var(--text-dark);
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.85;
+}
+
+/* ── ANTHROPIC SANS (system sans substitute) ── */
+.sans {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+}
+
+/* ── SECTION LABELS ── */
+.section-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 12px;
+}
+
+/* ── NAVIGATION ── */
+nav {
+  background: var(--bg-page);
+  border-bottom: 0.5px solid var(--border);
+  padding: 0 48px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  height: 48px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav .nav-logo {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-right: auto;
+  text-decoration: none;
+}
+
+nav a {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-dark);
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 1.5px solid transparent;
+  transition: border-color 0.15s, color 0.15s;
+}
+
+nav a:hover {
+  color: var(--accent-red);
+}
+
+nav a.active {
+  border-bottom-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+/* ── HERO ── */
+.hero {
+  background: var(--bg-dark);
+  padding: 72px 48px 64px;
+  color: #e8e2d9;
+}
+
+.hero-kicker {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.hero-kicker::before,
+.hero-kicker::after {
+  content: '';
+  display: inline-block;
+  width: 32px;
+  height: 0.5px;
+  background: var(--rule-dark);
+}
+
+.hero-eyebrow {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.hero h1 {
+  font-family: Georgia, serif;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: bold;
+  line-height: 1.1;
+  color: #f0ebe3;
+  margin-bottom: 12px;
+  max-width: 800px;
+}
+
+.hero-subtitle {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 18px;
+  color: #a09689;
+  margin-bottom: 36px;
+  max-width: 600px;
+}
+
+.thesis-box {
+  border-left: 4px solid var(--accent-red);
+  background: rgba(255,255,255,0.04);
+  padding: 20px 24px;
+  max-width: 700px;
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #c8c0b6;
+}
+
+.thesis-box .thesis-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 10px;
+  display: block;
+}
+
+/* ── BODY SECTIONS ── */
+.page-body {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 0 48px 80px;
+}
+
+.section {
+  padding: 48px 0;
+  border-bottom: 0.5px solid var(--border);
+}
+
+.section:last-child {
+  border-bottom: none;
+}
+
+.section h2 {
+  font-family: Georgia, serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 20px;
+  line-height: 1.25;
+}
+
+.section h3 {
+  font-family: Georgia, serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  margin-top: 28px;
+  line-height: 1.3;
+}
+
+.section p {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: var(--text-dark);
+  margin-bottom: 16px;
+  max-width: 680px;
+}
+
+/* ── PULL QUOTES ── */
+.pull-quote {
+  background: var(--dark-card);
+  border-left: 4px solid var(--accent-red);
+  padding: 24px 28px;
+  margin: 32px 0;
+  max-width: 680px;
+}
+
+.pull-quote p {
+  font-family: Georgia, serif;
+  font-style: italic;
+  font-size: 15px;
+  line-height: 1.75;
+  color: #c8c0b6;
+  margin-bottom: 12px;
+  max-width: none;
+}
+
+.pull-quote .attribution {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 0;
+  font-style: normal;
+}
+
+/* ── CARDS ── */
+.card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.card-grid {
+  display: grid;
+  gap: 16px;
+}
+
+.card-grid-2 { grid-template-columns: 1fr 1fr; }
+.card-grid-3 { grid-template-columns: 1fr 1fr 1fr; }
+
+.card h4 {
+  font-family: Georgia, serif;
+  font-size: 15px;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.card p {
+  font-size: 13px;
+  max-width: none;
+}
+
+.card .card-bar {
+  height: 2px;
+  border-radius: 1px;
+  margin-top: 16px;
+}
+
+.bar-red { background: var(--accent-red); }
+.bar-blue { background: var(--blue); }
+.bar-gray { background: #888; }
+
+/* ── STAT CARDS ── */
+.stat-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: 8px;
+  padding: 28px 24px;
+  text-align: center;
+}
+
+.stat-card .stat-number {
+  font-family: Georgia, serif;
+  font-size: 48px;
+  font-weight: bold;
+  color: var(--accent-red);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.stat-card .stat-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--muted);
+}
+
+/* ── TIMELINE ── */
+.timeline-wrap {
+  padding: 16px 0 32px;
+  overflow-x: auto;
+}
+
+.timeline {
+  position: relative;
+  min-width: 900px;
+  padding: 60px 0 20px;
+}
+
+.timeline-line {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  right: 0;
+  height: 0.5px;
+  background: var(--border);
+}
+
+.timeline-events {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+
+.timeline-event {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  cursor: default;
+}
+
+.timeline-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-bottom: 12px;
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  margin-top: 4px;
+}
+
+.dot-dark { background: var(--bg-dark); border: 1.5px solid #555; }
+.dot-blue { background: var(--blue); }
+.dot-red  { background: var(--accent-red); }
+
+.timeline-year {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  font-weight: bold;
+  color: var(--gold);
+  letter-spacing: 0.06em;
+  margin-bottom: 6px;
+}
+
+.timeline-text {
+  font-family: Georgia, serif;
+  font-size: 10px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+  max-width: 72px;
+}
+
+.timeline-text a {
+  color: var(--text-dark);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.timeline-text a:hover {
+  color: var(--accent-red);
+}
+
+/* ── NAV CARDS (bottom of landing) ── */
+.nav-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+  margin-top: 48px;
+}
+
+.nav-card {
+  display: block;
+  text-decoration: none;
+  padding: 36px 32px;
+  border-radius: 8px;
+  border: 0.5px solid transparent;
+  transition: opacity 0.15s;
+}
+
+.nav-card:hover { opacity: 0.88; }
+
+.nav-card-dark {
+  background: var(--dark-card);
+  border-color: #333;
+}
+
+.nav-card-red {
+  background: var(--accent-red);
+}
+
+.nav-card .card-part {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.nav-card-dark .card-part { color: var(--gold); }
+.nav-card-red  .card-part { color: rgba(255,255,255,0.7); }
+
+.nav-card h3 {
+  font-family: Georgia, serif;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.2;
+  margin-bottom: 10px;
+  color: #f0ebe3;
+}
+
+.nav-card p {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  max-width: none;
+  margin-bottom: 0;
+}
+
+.nav-card-dark p { color: #a09689; }
+.nav-card-red  p { color: rgba(255,255,255,0.8); }
+
+.nav-card .card-links {
+  margin-top: 20px;
+  display: flex;
+  gap: 16px;
+}
+
+.nav-card .card-link {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  text-decoration: none;
+  padding-bottom: 2px;
+  border-bottom: 0.5px solid;
+}
+
+.nav-card-dark .card-link { color: var(--gold); border-color: var(--gold); }
+.nav-card-red  .card-link { color: rgba(255,255,255,0.9); border-color: rgba(255,255,255,0.4); }
+
+/* ── CONCLUSION THESIS BOX ── */
+.conclusion-box {
+  background: var(--dark-card);
+  padding: 32px 36px;
+  border-radius: 8px;
+  margin-top: 40px;
+}
+
+.conclusion-box .thesis-label {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  display: block;
+  margin-bottom: 14px;
+}
+
+.conclusion-box p {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  line-height: 1.85;
+  color: #c8c0b6;
+  max-width: none;
+}
+
+/* ── FOOTNOTE NUMBERS ── */
+sup {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  color: var(--gold);
+  letter-spacing: 0.04em;
+}
+
+/* ── NATION PAGE SPECIFICS ── */
+.nation-header-bar {
+  height: 3px;
+  border-radius: 1.5px;
+  margin-bottom: 0;
+}
+
+.two-col {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 32px;
+  margin-top: 24px;
+}
+
+.historian-card {
+  background: var(--card-bg);
+  border: 0.5px solid var(--card-border);
+  border-radius: 8px;
+  padding: 24px;
+}
+
+.historian-card h4 {
+  font-family: Georgia, serif;
+  font-size: 14px;
+  font-weight: bold;
+  margin-bottom: 4px;
+}
+
+.historian-card .stance {
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-size: 9px;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 12px;
+  display: block;
+}
+
+.historian-card p {
+  font-size: 13px;
+  max-width: none;
+}
+
+/* Bibliography */
+.bib-entry {
+  font-family: Georgia, serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: var(--text-dark);
+  margin-bottom: 12px;
+  padding-left: 20px;
+  text-indent: -20px;
+}
+
+.bib-entry a {
+  color: var(--blue);
+}
+
+/* ── RESPONSIVE ── */
+@media (max-width: 768px) {
+  nav { padding: 0 20px; gap: 16px; overflow-x: auto; }
+  .hero { padding: 48px 20px 48px; }
+  .page-body { padding: 0 20px 60px; }
+  .card-grid-2, .card-grid-3, .two-col { grid-template-columns: 1fr; }
+  .nav-cards { grid-template-columns: 1fr; }
+}
